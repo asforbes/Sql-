@@ -1,0 +1,25 @@
+-- Sorting states by per capita income
+select name, per_capita_income
+from states
+order by per_capita_income ASC;
+
+-- Sorting states by median age
+select name, median_age
+from states
+order by median_age ASC;
+
+-- Showing which congressional district has the highest population of people living below poverty line
+select name, below_poverty_line 
+from congressional_districts 
+order by below_poverty_line DESC;
+
+-- States that have the lowest amount of immigrants 
+select name, foreign_born_population 
+from states 
+order by foreign_born_population ASC;
+
+-- Which place has the highest Asian population: NYC or LA?
+select name, Asian
+from places
+where name Like 'Ne%' or name like 'Lo%'
+order by asian DESC;
